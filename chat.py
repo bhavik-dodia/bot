@@ -13,7 +13,7 @@ from keras.models import load_model
 model = load_model('chatbot_model.h5')
 import json
 import random
-intents = json.loads(open('intents.json').read())
+intents = json.loads(open('intents.json', encoding='utf8').read())
 words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
 
@@ -43,10 +43,10 @@ def chat(inp):
     res = model.predict(np.array([bow(inp, words,show_details=False)]))[0]
     res_index = np.argmax(res)
     tag = classes[res_index]
-    if res[res_index] > 0.9:
+    if res[res_index] > 0.8:
        for tg in intents['intents']:
            if tg['tag'] == tag:
               responses = tg['responses']
        return random.choice(responses)      
     else:
-       return 'I didn\'t get that, try again!'
+       return random.choice(["Sorry, I didn't get that, try something else! 🧐🤔", "Sorry, I can't understand, try changing words! 🧐🤔"])
