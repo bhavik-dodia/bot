@@ -1,6 +1,6 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi there", "Hey", "Hola", "Hello"],
+         "patterns": ["Hi there", "Hey", "Hola", "Hello", "Hi"],
          "responses": ["Hello, thanks for asking 😊", "Good to see you again 😊", "Hi there, how can I help?"],
          "context": [""]
         },
@@ -87,6 +87,11 @@
         {"tag": "profession",
          "patterns": ["What is your profession?", "Are you a student?"],
          "responses": ["By profession, I am a 3rd year student of Babaria Institute of Technology, persuing CSE in BE. I am also a part-time Flutter developer. 👨‍💻"],
+         "context": [""]
+        },
+        {"tag": "ok",
+         "patterns": ["Okey", "Ok", "k", "kk", "Ohkey"],
+         "responses": ["😊", "👍"],
          "context": [""]
         }
    ]
