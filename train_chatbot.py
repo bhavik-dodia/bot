@@ -18,7 +18,7 @@ words=[]
 classes = []
 documents = []
 ignore_words = ['?', '!']
-data_file = open('intents.json',encoding='utf8').read()
+data_file = open('intents.json', encoding='utf8').read()
 intents = json.loads(data_file)
 
 
