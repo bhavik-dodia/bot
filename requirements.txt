@@ -67,7 +67,7 @@ tflearn==0.3.2
 toml==0.10.0
 tqdm==4.45.0
 typed-ast==1.4.0
-urllib3==1.25.9
+urllib3==1.26.5
 Werkzeug==1.0.1
 wincertstore==0.2
 wrapt==1.11.2
